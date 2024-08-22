@@ -8,6 +8,24 @@
       background: #b0d6fa;
       color: #000000;
       margin: 0;        
+
+      --secondary-glow: conic-gradient(
+        from 10deg at 50% 50%,
+        #eb7494 0deg,
+        #ae77b2 55deg,
+        #97b5da 120deg,
+        #0099ca 160deg,
+        transparent 360deg
+      );
+
+      --third-glow: conic-gradient(
+        from 90deg at 50% 50%,
+        #ff8b7e 0deg,
+        #e24e6b 160deg,
+        #7ed2da 120deg,
+        #8bdce0 55deg,
+        transparent 360deg
+      );
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -34,6 +52,76 @@
   .loginCard {
     @apply flex flex-col items-center justify-center min-h-[100vh];
   }
+
+  .home-navbar{
+    @apply flex flex-row p-2 gap-4 w-full h-24 justify-between bg-cyan-gradient;
+  }
+
+  .home-navbar-elements {
+    @apply flex items-center justify-between gap-0;
+  }
+
+  .home-footer{
+    @apply flex flex-row p-2 gap-4 w-full h-24 justify-between bg-cyan-gradient;
+  }
+
+  .home-footer-elements {
+    @apply flex flex-col items-center justify-center gap-4 py-4 tracking-wider;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40vh 0 0 0;
+    min-height: 100vh;
+  }
+
+  .mainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Prospect';
+    font-size:3rem;
+  }
+
+  .research{
+    margin: 2rem 0;
+    border-radius: 3vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Helvetica';
+    padding: 0 1rem;
+  }
+
+  .line
+  {
+    background-color: black;
+    display: flex;
+    flex-direction:row;
+    height:50vh;
+    width: 1px;
+
+  }
+
+  .btn-primary {
+    @apply text-white font-bold py-4 px-6 rounded-xl bg-transparent
+border-2 border-stone-50 shadow-md duration-300 hover:py-6 hover:px-8
+hover:rounded-lg hover:text-xl;
+  }
+
+  .btn-primary-left {
+    @apply hover:bg-blue-700 hover:border-blue-700;
+  }
+
+  .btn-primary-right {
+    @apply hover:bg-cyan-400 hover:border-cyan-400;
+  }
+
 }
 
 @layer utilities {
@@ -163,5 +251,12 @@
   .shad-sheet-content button {
     @apply top-2 focus:ring-0 focus:ring-offset-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
   }
+
+  .bg-cyan-gradient {
+    @apply bg-gradient-to-r from-cyan-300 to-blue-800;
+  }
 }
+
+
+
 
