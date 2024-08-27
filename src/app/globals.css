@@ -92,6 +92,16 @@ body::after {
 
 }
 
+.lineFooter
+{
+  background-color: black;
+  display: flex;
+  flex-direction:row;
+  height: 3vh;
+  width: 1px;
+
+}
+
 @layer base {
   .custom-scrollbar::-webkit-scrollbar {
       width: 4px;

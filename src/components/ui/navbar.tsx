@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HomeNavbar = () => {
 
@@ -6,22 +7,34 @@ const HomeNavbar = () => {
     <div className='home-navbar'>
         
         <div className='home-navbar-elements'>
-            <Image 
-                src='/logo-hidro.png'
-                width={125}
-                height={125}
-                alt='Logo de hidrobolivar'
-            />
+            <Link href='/'>
+                <Image 
+                    src='/logo-hidro.png'
+                    width={125}
+                    height={125}
+                    alt='Logo de hidrobolivar'
+                />
+            </Link>
         </div>
 
         <div className='home-navbar-elements'>
-            <div className='flex w-30 p-2'>
-                <button className='btn-primary btn-primary-right'>Noticias</button>
-            </div>
+            <Link href='/nosotros'>
+                <div className='flex w-30 p-2'>
+                    <button className='btn-primary btn-primary-right'>Nosotros</button>
+                </div>
+            </Link>
+            
+            <Link href='/noticias'>
+                <div className='flex w-30 p-2'>
+                    <button className='btn-primary btn-primary-right'>Noticias</button>
+                </div>
+            </Link>
 
-            <div className='flex w-30 p-2'>
-                <button className='btn-primary btn-primary-right'>Nosotros</button>
-            </div>
+            <Link href='pagos'>
+                <div className='flex w-30 p-2'>
+                    <button className='btn-primary btn-primary-right'>Métodos de pago</button>
+                </div>
+            </Link>                     
         </div>
     </div>
   );
