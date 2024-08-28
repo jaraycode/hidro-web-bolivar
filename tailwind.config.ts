@@ -21,6 +21,15 @@ const config = {
     },
     extend: {
       colors: {
+        landing: {
+          main: "#b0d6fa",
+        },
+
+        dashboard: {
+          main: "#00A8CC",
+          sidebar: "#C1DADF",
+          active: "#00A8CC",
+        },
         green: {
           300: "#1D8861",
           400: "#20976C",

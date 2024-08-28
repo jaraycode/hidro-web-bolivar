@@ -5,9 +5,7 @@
 
 @layer base {
   :root {
-      background: #b0d6fa;
-      color: #000000;
-      margin: 0;        
+    @apply bg-landing-main text-black m-0;
   }
 
   .custom-scrollbar::-webkit-scrollbar {
@@ -55,6 +53,10 @@
     @apply text-[18px] leading-[24px] font-bold;
   }
 
+  .text-18-semibold {
+    @apply text-[18px] leading-[24px] font-semibold;
+  }
+
   .text-16-semibold {
     @apply text-[16px] leading-[20px] font-semibold;
   }
@@ -63,12 +65,20 @@
     @apply text-[16px] leading-[20px] font-normal;
   }
 
+  .text-14-semibold {
+    @apply text-[14px] leading-[18px] font-semibold;
+  }
+
   .text-14-medium {
     @apply text-[14px] leading-[18px] font-medium;
   }
 
   .text-14-regular {
     @apply text-[14px] leading-[18px] font-normal;
+  }
+
+  .text-12-medium {
+    @apply text-[12px] leading-[16px] font-medium;
   }
 
   .text-12-regular {
@@ -162,6 +172,22 @@
   
   .shad-sheet-content button {
     @apply top-2 focus:ring-0 focus:ring-offset-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+  }
+
+  .margin-custom {
+    margin: 5px 0px;
+  }
+
+  .flex-4 {
+    flex: 4;
+  }
+
+  .dashboard-container {
+    @apply flex h-[450px] rounded-md shadow-md bg-dashboard-sidebar;
+  }
+
+  .dashboard-container-element {
+    @apply flex flex-col items-center justify-center w-full rounded-lg;
   }
 }
 
