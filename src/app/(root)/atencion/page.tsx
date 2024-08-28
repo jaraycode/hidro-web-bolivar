@@ -1,12 +1,12 @@
 import React from 'react'
 
-const MetodosDePagoPage = () => {
+const AtencionPage = () => {
   return (
     <div className='mainDiv w-full bg-cyan-gradient'>
-        Método de pago page
+        Atencion page
         <div className='line'/>
     </div>
   )
 }
 
-export default MetodosDePagoPage;
+export default AtencionPage;
