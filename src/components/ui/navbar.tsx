@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars} from '@fortawesome/free-solid-svg-icons'
+import { faBars} from '@fortawesome/free-solid-svg-icons';
 
 const HomeNavbar = () => {
 
@@ -32,31 +32,9 @@ const HomeNavbar = () => {
         </div>
 
 
-        <div className='w-full'>
-            <div className='home-navbar-elements justify-center'>
-                <Link href='/nosotros'>
-                    <div className='flex w-30 p-2'>
-                        <button className='btn-primary btn-primary-right'>Nosotros</button>
-                    </div>
-                </Link>
-                
-                <Link href='/noticias'>
-                    <div className='flex w-30 p-2'>
-                        <button className='btn-primary btn-primary-right'>Noticias</button>
-                    </div>
-                </Link>
-
-                <Link href='acueductos'>
-                    <div className='flex w-30 p-2'>
-                        <button className='btn-primary btn-primary-right'>Acueductos</button>
-                    </div>
-                </Link>     
-
-                <Link href='atencion'>
-                    <div className='flex w-30 p-2'>
-                        <button className='btn-primary btn-primary-right'>Atencion</button>
-                    </div>
-                </Link>                     
+        <div className='absolute w-full h-full py-4'>
+            <div className='flex items-center justify-center border-2 border-black'>
+              <NavigationMenuDemo />
             </div>
         </div>
     </div>
@@ -66,12 +44,7 @@ const HomeNavbar = () => {
 export default HomeNavbar
 
 
-
-
-
-
-
-export function NavigationMenuDemo() {
+function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
