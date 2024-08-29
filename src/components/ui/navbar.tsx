@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import * as React from "react";
-import {components} from '@/lib/constants/navigationBarConstans';
+import {componentsAcueducto, componentsAtencion, componentsNoticias} from '@/lib/constants/navigationBarConstans';
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSitemap} from '@fortawesome/free-solid-svg-icons';
 
 const HomeNavbar = () => {
 
@@ -33,7 +33,7 @@ const HomeNavbar = () => {
 
 
         <div className='absolute w-full h-full py-4'>
-            <div className='flex items-center justify-center border-2 border-black'>
+            <div className='flex items-center justify-center '>
               <NavigationMenuDemo />
             </div>
         </div>
@@ -50,7 +50,7 @@ function NavigationMenuDemo() {
       <NavigationMenuList>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -59,7 +59,7 @@ function NavigationMenuDemo() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <FontAwesomeIcon icon={faBars} size='xl'/>
+                    <FontAwesomeIcon icon={faSitemap} size='xl'/>
                     <div className="mb-2 mt-4 text-lg font-medium">
                       Organigrama
                     </div>
@@ -83,10 +83,10 @@ function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Noticias</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
+              {componentsNoticias.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
@@ -100,12 +100,39 @@ function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Acueductos
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuTrigger>Acueductos</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {componentsAcueducto.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Atencion al cliente</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+              {componentsAtencion.map((component) => (
+                <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                >
+                  {component.description}
+                </ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
       </NavigationMenuList>
     </NavigationMenu>
   )

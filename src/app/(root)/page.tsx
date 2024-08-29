@@ -8,7 +8,6 @@ export default function Home() {
       
 
       <div className='mainDiv w-full bg-cyan-gradient'>
-        
           <h1 className='bigTitle'>:c </h1>
           <div className='research'>Mi gallo pinto</div>
           <div className='line'/>
